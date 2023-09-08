@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C9735CF2AA4C70F0077CC8A /* EventsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9735CE2AA4C70F0077CC8A /* EventsListTableViewCell.swift */; };
+		2C9735D22AABBC070077CC8A /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9735D12AABBC070077CC8A /* EventViewController.swift */; };
+		2C9735D42AABC1AA0077CC8A /* EventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9735D32AABC1A90077CC8A /* EventViewCell.swift */; };
+		2C9735D82AABC8580077CC8A /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9735D72AABC8580077CC8A /* AddEventViewController.swift */; };
+		2C9735DA2AABC8720077CC8A /* AddEventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9735D92AABC8720077CC8A /* AddEventViewCell.swift */; };
+		2C9735DC2AABCAC70077CC8A /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9735DB2AABCAC70077CC8A /* DateView.swift */; };
 		F3CB02E02982E91D0078A0F9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02D62982E91D0078A0F9 /* Event.swift */; };
 		F3CB02E12982E91D0078A0F9 /* EventRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02D72982E91D0078A0F9 /* EventRegistry.swift */; };
 		F3CB02E22982E91D0078A0F9 /* DBParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB02D82982E91D0078A0F9 /* DBParameter.swift */; };
@@ -23,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C9735CE2AA4C70F0077CC8A /* EventsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListTableViewCell.swift; sourceTree = "<group>"; };
+		2C9735D12AABBC070077CC8A /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		2C9735D32AABC1A90077CC8A /* EventViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewCell.swift; sourceTree = "<group>"; };
+		2C9735D72AABC8580077CC8A /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		2C9735D92AABC8720077CC8A /* AddEventViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewCell.swift; sourceTree = "<group>"; };
+		2C9735DB2AABCAC70077CC8A /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		F3CB02C12982E8D50078A0F9 /* EventViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CB02CA2982E8D70078A0F9 /* EventViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EventViewer.entitlements; sourceTree = "<group>"; };
 		F3CB02D62982E91D0078A0F9 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -52,6 +64,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C9735CD2AA4C6B50077CC8A /* EventsList */ = {
+			isa = PBXGroup;
+			children = (
+				F3CB02F52982EC100078A0F9 /* EventsListViewController.swift */,
+				2C9735CE2AA4C70F0077CC8A /* EventsListTableViewCell.swift */,
+			);
+			path = EventsList;
+			sourceTree = "<group>";
+		};
+		2C9735D02AABBBBE0077CC8A /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				2C9735D12AABBC070077CC8A /* EventViewController.swift */,
+				2C9735D32AABC1A90077CC8A /* EventViewCell.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		2C9735D52AABC6610077CC8A /* AddEvent */ = {
+			isa = PBXGroup;
+			children = (
+				2C9735D72AABC8580077CC8A /* AddEventViewController.swift */,
+				2C9735D92AABC8720077CC8A /* AddEventViewCell.swift */,
+				2C9735DB2AABCAC70077CC8A /* DateView.swift */,
+			);
+			path = AddEvent;
+			sourceTree = "<group>";
+		};
+		2C9735D62AABC6D10077CC8A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F3CB02F82982EED00078A0F9 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F3CB02B82982E8D50078A0F9 = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +162,10 @@
 		F3CB02FA2982F1B00078A0F9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F3CB02F52982EC100078A0F9 /* EventsListViewController.swift */,
-				F3CB02F82982EED00078A0F9 /* LoginViewController.swift */,
+				2C9735D52AABC6610077CC8A /* AddEvent */,
+				2C9735D02AABBBBE0077CC8A /* Event */,
+				2C9735CD2AA4C6B50077CC8A /* EventsList */,
+				2C9735D62AABC6D10077CC8A /* Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -160,7 +210,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					F3CB02C02982E8D50078A0F9 = {
 						CreatedOnToolsVersion = 14.2;
@@ -203,15 +253,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3CB02F42982EBC60078A0F9 /* SceneDelegate.swift in Sources */,
+				2C9735D82AABC8580077CC8A /* AddEventViewController.swift in Sources */,
+				2C9735DA2AABC8720077CC8A /* AddEventViewCell.swift in Sources */,
+				F3CB02F22982EBAB0078A0F9 /* AppDelegate.swift in Sources */,
 				F3CB02E62982E91D0078A0F9 /* EventManager.swift in Sources */,
+				2C9735CF2AA4C70F0077CC8A /* EventsListTableViewCell.swift in Sources */,
+				2C9735DC2AABCAC70077CC8A /* DateView.swift in Sources */,
 				F3CB02E72982E91D0078A0F9 /* EventManager+Model.swift in Sources */,
 				F3CB02F92982EED00078A0F9 /* LoginViewController.swift in Sources */,
 				F3CB02E22982E91D0078A0F9 /* DBParameter.swift in Sources */,
-				F3CB02F22982EBAB0078A0F9 /* AppDelegate.swift in Sources */,
 				F3CB02F62982EC100078A0F9 /* EventsListViewController.swift in Sources */,
-				F3CB02F42982EBC60078A0F9 /* SceneDelegate.swift in Sources */,
 				F3CB02E52982E91D0078A0F9 /* DBEvent.swift in Sources */,
+				2C9735D22AABBC070077CC8A /* EventViewController.swift in Sources */,
 				F3CB02ED2982E9CD0078A0F9 /* CoreData+Utilities.swift in Sources */,
+				2C9735D42AABC1AA0077CC8A /* EventViewCell.swift in Sources */,
 				F3CB02E02982E91D0078A0F9 /* Event.swift in Sources */,
 				F3CB02E12982E91D0078A0F9 /* EventRegistry.swift in Sources */,
 				F3CB02EA2982E9890078A0F9 /* ParameterSet.swift in Sources */,
@@ -254,6 +310,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -312,6 +369,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -338,11 +396,13 @@
 				CODE_SIGN_ENTITLEMENTS = EventViewer/Resources/EventViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7HXSBL2C9S;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = J5V4FRQ99J;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventViewer/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -360,7 +420,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simla.EventViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -378,11 +438,13 @@
 				CODE_SIGN_ENTITLEMENTS = EventViewer/Resources/EventViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7HXSBL2C9S;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = J5V4FRQ99J;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventViewer/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -400,7 +462,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simla.EventViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

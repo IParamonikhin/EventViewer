@@ -12,7 +12,9 @@ import Foundation
 public final class EventManager: NSPersistentContainer {
 
     public let queue = DispatchQueue(label: "com.simla.PersistantEventManager", qos: .default)
-
+    
+    var events: [NSManagedObject] = []
+    
     public init() {
         super.init(name: "PersistantEventManagerDB", managedObjectModel: Self.model)
         let description = NSPersistentStoreDescription()
@@ -46,7 +48,47 @@ public final class EventManager: NSPersistentContainer {
             }
         })
     }
-
+    
+    public func getEvents(n: Int = 0) {
+        
+        var allEvents: [NSManagedObject] = []
+        let request = DBEvent.makeFetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(DBEvent.createdAt), ascending: false)
+        request.sortDescriptors = [sort]
+        request.fetchLimit = (15 + n)
+        
+        queue.sync {
+            do {
+                allEvents = try viewContext.fetch(request)
+            } catch let error as NSError {
+                print("Coud not fetch \(error), \(error.userInfo)")
+            }
+        }
+        
+        events = allEvents
+        
+    }
+    
+    public func deleteEvent(index: Int) {
+        
+        let context = viewContext
+        let parameterSet = events[index].value(forKey: KeyProperties.parameters) as? NSSet ?? NSSet()
+        
+        context.delete(events[index])
+        events.remove(at: index)
+        
+        // remove parameters of event
+        for parameter in parameterSet {
+            context.delete((parameter as! NSManagedObject))
+            
+        }
+        do {
+            try context.save()
+        } catch {
+            print("Error:", error.localizedDescription)
+        }
+    }
+    
     public func entitiesCount() -> Int {
         do {
             return try viewContext.count(for: DBEvent.makeFetchRequest())
